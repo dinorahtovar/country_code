@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBackground">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:background="@color/colorBackgroundGray"
+        android:fontFamily="@font/bogle_regular"
+        android:gravity="center_vertical"
+        android:paddingEnd="35dp"
+        android:paddingStart="35dp"
+        android:textColor="@color/colorTitle"
+        android:textSize="14sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="18dp"
+        android:layout_height="13.5dp"
+        android:layout_marginBottom="13dp"
+        android:layout_marginStart="40dp"
+        android:scaleType="centerCrop"
+        android:textColor="@color/colorTitle"
+        android:src="@drawable/mx"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/content_descriptor_flag"
+        app:layout_goneMarginTop="0dp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/bogle_regular"
+        android:gravity="center_vertical"
+        android:textColor="@color/colorTitle"
+        android:textSize="14sp"
+        android:paddingBottom="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_goneMarginTop="0dp" />
+
+</android.support.constraint.ConstraintLayout>

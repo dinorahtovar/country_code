@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/country_code_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="22dp"
+        android:fontFamily="@font/bogle_bold"
+        android:text="@string/select_country"
+        android:textColor="@color/colorTitle"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/country_code_searchable"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:background="@drawable/bottom_line"
+        android:drawablePadding="11dp"
+        android:drawableStart="@drawable/search_country"
+        android:fontFamily="@font/bogle_regular"
+        android:hint="@string/select_search_country"
+        android:inputType="text"
+        android:paddingEnd="35dp"
+        android:paddingStart="35dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/country_code_title" />
+
+    <TextView
+        android:id="@+id/country_code_preselected"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:fontFamily="@font/bogle_bold"
+        android:textColor="@color/colorTitle"
+        android:textSize="14sp"
+        android:paddingStart="35dp"
+        android:paddingEnd="35dp"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/country_code_searchable"
+        tools:text="Mexico" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">phone.code</string>
+
+    <string name="select_country">Select a country</string>
+    <string name="select_search_country">Search for a country</string>
+
+
+    <string name="content_descriptor_flag">Flag by country</string>
+
+</resources>
