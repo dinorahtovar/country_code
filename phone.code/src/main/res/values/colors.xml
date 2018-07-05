@@ -6,4 +6,5 @@
     <color name="colorHint">#a8acb4</color>
     <color name="colorBackground">#FFFFFF</color>
     <color name="colorBackgroundGray">#f5f5f5</color>
+    <color name="colorLetter">#d9000000</color>
 </resources>

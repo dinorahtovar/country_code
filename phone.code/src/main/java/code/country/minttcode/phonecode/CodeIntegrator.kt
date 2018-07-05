@@ -18,7 +18,7 @@ class CodeIntegrator {
     private val moreExtras = HashMap<String, Any>(3)
 
     protected fun getDefaultActivity(): Class<*> {
-        return PhoneCodeActivity::class.java
+        return PhoneCodeDialog::class.java
     }
 
     fun getLoginActivity(): Class<*> {
