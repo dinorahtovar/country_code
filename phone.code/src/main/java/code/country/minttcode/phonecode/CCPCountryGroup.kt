@@ -18,14 +18,14 @@ class CCPCountryGroup private constructor(internal var defaultNameCode: String, 
      * @param areaCode for which we are looking for country
      * @return country that matches areaCode. If no country matched, returns default country.
      */
-    fun getCountryForAreaCode(context: Context, language: PickerCountryCode.Language, areaCode: String):  {
+    fun getCountryForAreaCode(context: Context, language: PickerCountryCode.Language, areaCode: String): CodesCountryList? {
         var nameCode = defaultNameCode
         for ((key, value) in nameCodeToAreaCodesMap) {
             if (value.contains(areaCode)) {
                 nameCode = key
             }
         }
-        return CCPCountry.getCountryForNameCodeFromLibraryMasterList(context, language, nameCode)
+        return CodesCountryList.getCountryForNameCodeFromLibraryMasterList(context, language, nameCode)
     }
 
     companion object {

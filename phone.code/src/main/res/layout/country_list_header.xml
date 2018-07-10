@@ -7,7 +7,7 @@
     android:background="@color/colorBackground">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/country_list_divider"
         android:layout_width="0dp"
         android:layout_height="41dp"
         android:background="@color/colorBackgroundGray"
@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/country_list_flag"
         android:layout_width="18dp"
         android:layout_height="13.5dp"
         android:layout_marginBottom="13dp"
@@ -37,6 +37,7 @@
         app:layout_goneMarginTop="0dp" />
 
     <TextView
+        android:id="@+id/country_list_name"
         android:layout_width="0dp"
         android:layout_height="37dp"
         android:layout_marginStart="8dp"
@@ -47,8 +48,8 @@
         android:textSize="14sp"
         android:paddingBottom="3dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/country_list_flag"
+        app:layout_constraintTop_toBottomOf="@+id/country_list_divider"
         app:layout_goneMarginTop="0dp" />
 
 </android.support.constraint.ConstraintLayout>

@@ -7,20 +7,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46b98180-3595-48a2-b3a6-074378fe0dfb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_2_51_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_2_51_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_2_51_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/CCPCountryGroup.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/CodesCountryList.kt" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/phone.code/build.gradle" afterPath="$PROJECT_DIR$/phone.code/build.gradle" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/CountryCodeAdapter.kt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/CountryCodeHolder.kt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/SectionTitleProvider.kt" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/jarAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/jarAnalysis.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/phone.code/phone.code.iml" afterPath="$PROJECT_DIR$/phone.code/phone.code.iml" />
-      <change beforePath="$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/CodeIntegrator.kt" afterPath="$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/CodeIntegrator.kt" />
-      <change beforePath="$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/PhoneCodeActivity.kt" afterPath="$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/PhoneCodeDialog.kt" />
-      <change beforePath="$PROJECT_DIR$/phone.code/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/phone.code/src/main/res/values/colors.xml" />
+      <change beforePath="$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/CCPCountryGroup.kt" afterPath="$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/CCPCountryGroup.kt" />
+      <change beforePath="$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/CodesCountryList.kt" afterPath="$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/CodesCountryList.kt" />
+      <change beforePath="$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/PhoneCodeDialog.kt" afterPath="$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/PhoneCodeDialog.kt" />
+      <change beforePath="$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/PickerCountryCode.kt" afterPath="$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/PickerCountryCode.kt" />
+      <change beforePath="$PROJECT_DIR$/phone.code/src/main/res/layout/country_list_header.xml" afterPath="$PROJECT_DIR$/phone.code/src/main/res/layout/country_list_header.xml" />
+      <change beforePath="$PROJECT_DIR$/phone.code/src/main/res/layout/country_phone_list.xml" afterPath="$PROJECT_DIR$/phone.code/src/main/res/layout/country_phone_list.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,85 +45,108 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PickerCountryCode.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/PickerCountryCode.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="42" column="21" lean-forward="true" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
-              <folding>
-                <element signature="e#42#283#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/phone.code/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="41" lean-forward="false" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PhoneCodeDialog.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/PhoneCodeDialog.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="22" column="44" lean-forward="false" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CodesCountryList.kt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/CodesCountryList.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4258">
-              <caret line="654" column="53" lean-forward="false" selection-start-line="654" selection-start-column="37" selection-end-line="654" selection-end-column="53" />
-              <folding>
-                <element signature="e#19#488#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CCPCountryGroup.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/CCPCountryGroup.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="20" column="105" lean-forward="false" selection-start-line="20" selection-start-column="105" selection-end-line="20" selection-end-column="105" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout_picker_country.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/phone.code/src/main/res/layout/layout_picker_country.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="35" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="vertical" split-proportion="0.5465538">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="PickerCountryCode.kt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/PickerCountryCode.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="90">
+                  <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/phone.code/build.gradle">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="30">
+                  <caret line="2" column="41" lean-forward="false" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="PhoneCodeDialog.kt" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/PhoneCodeDialog.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="75">
+                  <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#42#147#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CodesCountryList.kt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/CodesCountryList.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="118">
+                  <caret line="910" column="9" lean-forward="false" selection-start-line="910" selection-start-column="9" selection-end-line="910" selection-end-column="9" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CountryCodeAdapter.kt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/CountryCodeAdapter.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="435">
+                  <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#42#152#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CountryCodeHolder.kt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/CountryCodeHolder.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="255">
+                  <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+                  <folding>
+                    <element signature="e#42#177#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="country_list_header.xml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/phone.code/src/main/res/layout/country_list_header.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="71">
+                  <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="42" />
+                  <folding />
+                </state>
+              </provider>
+              <provider editor-type-id="android-designer2">
+                <state />
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="country_phone_list.xml" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/phone.code/src/main/res/layout/country_phone_list.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="56">
+                  <caret line="22" column="50" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="50" />
+                  <folding />
+                </state>
+              </provider>
+              <provider editor-type-id="android-designer2">
+                <state />
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -3294,7 +3320,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/phone.code/src/main/res/layout/country_list_header.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/main_activity.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/code/country/minttcode/countryphonearea/MainActivity.kt" />
@@ -3304,10 +3329,15 @@
         <option value="$PROJECT_DIR$/phone.code/src/main/res/layout/layout_picker_country.xml" />
         <option value="$PROJECT_DIR$/phone.code/build.gradle" />
         <option value="$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/PhoneCodeActivity.kt" />
-        <option value="$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/PhoneCodeDialog.kt" />
-        <option value="$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/PickerCountryCode.kt" />
         <option value="$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/CCPCountryGroup.kt" />
+        <option value="$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/SectionTitleProvider.kt" />
+        <option value="$PROJECT_DIR$/phone.code/src/main/res/layout/country_list_header.xml" />
+        <option value="$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/CountryCodeHolder.kt" />
+        <option value="$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/CountryCodeAdapter.kt" />
+        <option value="$PROJECT_DIR$/phone.code/src/main/res/layout/country_phone_list.xml" />
+        <option value="$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/PickerCountryCode.kt" />
         <option value="$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/CodesCountryList.kt" />
+        <option value="$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/PhoneCodeDialog.kt" />
       </list>
     </option>
   </component>
@@ -3332,19 +3362,15 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane" />
+      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <expand>
             <path>
               <item name="Code Area" type="1abcf292:AndroidViewProjectNode" />
               <item name="phone.code" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="Code Area" type="1abcf292:AndroidViewProjectNode" />
-              <item name="phone.code" type="feadf853:AndroidModuleNode" />
-              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
             </path>
             <path>
               <item name="Code Area" type="1abcf292:AndroidViewProjectNode" />
@@ -3366,12 +3392,6 @@
               <item name="Code Area" type="1abcf292:AndroidViewProjectNode" />
               <item name="phone.code" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="drawable" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="Code Area" type="1abcf292:AndroidViewProjectNode" />
-              <item name="phone.code" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
               <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
             <path>
@@ -3382,7 +3402,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3617,60 +3636,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/phone.code/src/main/res/layout/layout_picker_country.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phone.code/src/main/res/layout/country_list_header.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="41" lean-forward="false" selection-start-line="24" selection-start-column="3" selection-end-line="36" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/CodeIntegrator.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/PhoneCodeDialog.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/ResourcesPhone.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/PickerCountryCode.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="23" column="10" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phone.code/src/main/res/layout/layout_picker_country.xml">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="41" lean-forward="false" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
           <folding />
@@ -3695,7 +3660,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3703,7 +3667,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding />
+          <folding>
+            <element signature="e#42#147#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3711,7 +3677,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3738,7 +3703,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3746,7 +3710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3762,9 +3725,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
@@ -3772,6 +3732,9 @@
             <element signature="e#601#619#0" expanded="false" />
           </folding>
         </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/code/country/minttcode/countryphonearea/MainActivity.kt">
@@ -3789,22 +3752,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/phone.code/src/main/res/layout/country_list_header.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/phone.code/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3823,40 +3774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phone.code/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="41" lean-forward="false" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/PhoneCodeDialog.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="22" column="44" lean-forward="false" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/PickerCountryCode.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="42" column="21" lean-forward="true" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
-          <folding>
-            <element signature="e#42#283#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/CCPCountryGroup.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="105" lean-forward="false" selection-start-line="20" selection-start-column="105" selection-end-line="20" selection-end-column="105" />
           <folding />
         </state>
       </provider>
@@ -3966,12 +3883,110 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/phone.code/src/main/res/drawable/mx.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/CCPCountryGroup.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="26" column="9" lean-forward="false" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/SectionTitleProvider.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="43" lean-forward="true" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phone.code/src/main/res/layout/country_phone_header.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="52" lean-forward="true" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/CountryCodeHolder.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+          <folding>
+            <element signature="e#42#177#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/CountryCodeAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="e#42#152#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phone.code/src/main/res/layout/country_list_header.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phone.code/src/main/res/layout/country_phone_list.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="22" column="50" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phone.code/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="41" lean-forward="false" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/CodesCountryList.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4258">
-          <caret line="654" column="53" lean-forward="false" selection-start-line="654" selection-start-column="37" selection-end-line="654" selection-end-column="53" />
+        <state relative-caret-position="118">
+          <caret line="910" column="9" lean-forward="false" selection-start-line="910" selection-start-column="9" selection-end-line="910" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/PickerCountryCode.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phone.code/src/main/java/code/country/minttcode/phonecode/PhoneCodeDialog.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <element signature="e#19#488#0" expanded="true" />
+            <element signature="e#42#147#0" expanded="true" />
           </folding>
         </state>
       </provider>

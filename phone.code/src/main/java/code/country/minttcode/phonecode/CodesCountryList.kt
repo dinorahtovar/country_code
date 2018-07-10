@@ -1,4 +1,4 @@
-package com.hbb20
+package code.country.minttcode.phonecode
 
 import android.content.Context
 import android.util.Log
@@ -21,18 +21,17 @@ import java.util.Locale
  * Created by hbb20 on 11/1/16.
  */
 class CodesCountryList : Comparable<CodesCountryList> {
-    var nameCode: String
-    var phoneCode: String
-    var name: String
-    var englishName: String
 
+    var nameCode: String? = null
+    var phoneCode: String? = null
+    var name: String? = null
+    var englishName: String? = null
     internal var flagResID = DEFAULT_FLAG_RES
 
     val flagID: Int
         get() {
-            if (flagResID == -99) {
+            if (flagResID == -99)
                 flagResID = getFlagMasterResID(this)
-            }
             return flagResID
         }
 
@@ -57,7 +56,7 @@ class CodesCountryList : Comparable<CodesCountryList> {
     }
 
     internal fun logString(): String {
-        return nameCode.toUpperCase() + " +" + phoneCode + "(" + name + ")"
+        return nameCode?.toUpperCase() + " +" + phoneCode + "(" + name + ")"
     }
 
     /**
@@ -69,7 +68,7 @@ class CodesCountryList : Comparable<CodesCountryList> {
     internal fun isEligibleForQuery(query: String): Boolean {
         var query = query
         query = query.toLowerCase()
-        return name.toLowerCase().contains(query) || nameCode.toLowerCase().contains(query) || phoneCode.toLowerCase().contains(query) || englishName.toLowerCase().contains(query)
+        return name?.toLowerCase()?.contains(query)!! || nameCode?.toLowerCase()?.contains(query)!! || phoneCode?.toLowerCase()?.contains(query)!! || englishName?.toLowerCase()?.contains(query)!!
     }
 
     override fun compareTo(o: CodesCountryList): Int {
@@ -117,7 +116,7 @@ class CodesCountryList : Comparable<CodesCountryList> {
          * @param context: required to access application resources (where country.xml is).
          * @return List of all the countries available in xml file.
          */
-        internal fun loadDataFromXML(context: Context, language: PickerCountryCode.Language) {
+        internal fun loadDataFromXML(context: Context, language: PickerCountryCode.Language?) {
             var countries: MutableList<CodesCountryList> = ArrayList()
             var tempDialogTitle = ""
             var tempSearchHint = ""
@@ -220,7 +219,7 @@ class CodesCountryList : Comparable<CodesCountryList> {
          * or returns null if no country matches given code.
          * if same code (e.g. +1) available for more than one country ( US, canada) , this function will return preferred country.
          */
-        fun getCountryForCode(context: Context, language: PickerCountryCode.Language, preferredCountries: List<CodesCountryList>?, code: String): CodesCountryList? {
+        private fun getCountryForCode(context: Context, language: PickerCountryCode.Language, preferredCountries: List<CodesCountryList>?, code: String): CodesCountryList? {
 
             /**
              * check in preferred countries
@@ -249,24 +248,21 @@ class CodesCountryList : Comparable<CodesCountryList> {
          * @avoid Search a country which matches @param code. This method is just to support correct preview
          */
         internal fun getCountryForCodeFromEnglishList(code: String): CodesCountryList? {
-
             val countries: List<CodesCountryList>
             countries = libraryMasterCountriesEnglish
-
             for (ccpCountry in countries) {
-                if (ccpCountry.phoneCode == code) {
+                if (ccpCountry.phoneCode == code)
                     return ccpCountry
-                }
             }
             return null
         }
 
         internal fun getCustomMasterCountryList(context: Context, codePicker: PickerCountryCode): List<CodesCountryList>? {
             codePicker.refreshCustomMasterList()
-            return if (codePicker.customMasterCountriesList != null && codePicker.customMasterCountriesList.size() > 0) {
-                codePicker.getCustomMasterCountriesList()
+            return if (codePicker.customMasterCountriesList != null && codePicker.customMasterCountriesList!!.isNotEmpty()) {
+                codePicker.customMasterCountriesList
             } else {
-                getLibraryMasterCountryList(context, codePicker.getLanguageToApply())
+                getLibraryMasterCountryList(context, codePicker.languageToApply)
             }
         }
 
@@ -277,14 +273,13 @@ class CodesCountryList : Comparable<CodesCountryList> {
          * @param customMasterCountriesList
          * @param nameCode                  country name code. i.e US or us or Au. See countries.xml for all code names.  @return Country that has phone code as @param code.
          */
-        internal fun getCountryForNameCodeFromCustomMasterList(context: Context, customMasterCountriesList: List<CodesCountryList>?, language: CountryCodePicker.Language, nameCode: String): CodesCountryList? {
-            if (customMasterCountriesList == null || customMasterCountriesList.size == 0) {
+        internal fun getCountryForNameCodeFromCustomMasterList(context: Context, customMasterCountriesList: List<CodesCountryList>?, language: PickerCountryCode.Language, nameCode: String): CodesCountryList? {
+            if (customMasterCountriesList == null || customMasterCountriesList.isEmpty()) {
                 return getCountryForNameCodeFromLibraryMasterList(context, language, nameCode)
             } else {
                 for (ccpCountry in customMasterCountriesList) {
-                    if (ccpCountry.nameCode.equals(nameCode, ignoreCase = true)) {
+                    if (ccpCountry.nameCode.equals(nameCode, ignoreCase = true))
                         return ccpCountry
-                    }
                 }
             }
             return null
@@ -298,13 +293,11 @@ class CodesCountryList : Comparable<CodesCountryList> {
          * @return Country that has phone code as @param code.
          * or returns null if no country matches given code.
          */
-        fun getCountryForNameCodeFromLibraryMasterList(context: Context, language: PickerCountryCode.Language, nameCode: String): CodesCountryList? {
-            val countries: List<CodesCountryList>?
-            countries = CodesCountryList.getLibraryMasterCountryList(context, language)
+        fun getCountryForNameCodeFromLibraryMasterList(context: Context, language: PickerCountryCode.Language?, nameCode: String): CodesCountryList? {
+            val countries: List<CodesCountryList>? = CodesCountryList.getLibraryMasterCountryList(context, language)
             for (ccpCountry in countries!!) {
-                if (ccpCountry.nameCode.equals(nameCode, ignoreCase = true)) {
+                if (ccpCountry.nameCode.equals(nameCode, ignoreCase = true))
                     return ccpCountry
-                }
             }
             return null
         }
@@ -321,9 +314,8 @@ class CodesCountryList : Comparable<CodesCountryList> {
             val countries: List<CodesCountryList>
             countries = libraryMasterCountriesEnglish
             for (CCPCountry in countries) {
-                if (CCPCountry.nameCode.equals(nameCode, ignoreCase = true)) {
+                if (CCPCountry.nameCode.equals(nameCode, ignoreCase = true))
                     return CCPCountry
-                }
             }
             return null
         }
@@ -358,7 +350,7 @@ class CodesCountryList : Comparable<CodesCountryList> {
         internal fun getCountryForNumber(context: Context, language: PickerCountryCode.Language, preferredCountries: List<CodesCountryList>?, fullNumber: String): CodesCountryList? {
             val firstDigit: Int
             //String plainNumber = PhoneNumberUtil.getInstance().normalizeDigitsOnly(fullNumber);
-            if (fullNumber.length != 0) {
+            if (fullNumber.isNotEmpty()) {
                 if (fullNumber[0] == '+') {
                     firstDigit = 1
                 } else {
@@ -377,11 +369,11 @@ class CodesCountryList : Comparable<CodesCountryList> {
                     if (countryGroup != null) {
                         val areaCodeStartsAt = firstDigit + code.length
                         //when phone number covers area code too.
-                        if (fullNumber.length >= areaCodeStartsAt + countryGroup!!.areaCodeLength) {
-                            val areaCode = fullNumber.substring(areaCodeStartsAt, areaCodeStartsAt + countryGroup!!.areaCodeLength)
-                            return countryGroup!!.getCountryForAreaCode(context, language, areaCode)
+                        if (fullNumber.length >= areaCodeStartsAt + countryGroup.areaCodeLength) {
+                            val areaCode = fullNumber.substring(areaCodeStartsAt, areaCodeStartsAt + countryGroup.areaCodeLength)
+                            return countryGroup.getCountryForAreaCode(context, language, areaCode)
                         } else {
-                            return getCountryForNameCodeFromLibraryMasterList(context, language, countryGroup!!.defaultNameCode)
+                            return getCountryForNameCodeFromLibraryMasterList(context, language, countryGroup.defaultNameCode)
                         }
                     } else {
                         ccpCountry = CodesCountryList.getCountryForCode(context, language, preferredCountries, code)
@@ -408,7 +400,7 @@ class CodesCountryList : Comparable<CodesCountryList> {
          * Country IN +91(India) for  918866667722
          * null for 2956635321 ( as neither of "2", "29" and "295" matches any country code)
          */
-        fun getCountryForNumber(context: Context, language: CountryCodePicker.Language, fullNumber: String): CodesCountryList? {
+        fun getCountryForNumber(context: Context, language: PickerCountryCode.Language, fullNumber: String): CodesCountryList? {
             return getCountryForNumber(context, language, null, fullNumber)
         }
 
@@ -419,7 +411,7 @@ class CodesCountryList : Comparable<CodesCountryList> {
          * @return
          */
         internal fun getFlagMasterResID(CCPCountry: CodesCountryList): Int {
-            when (CCPCountry.nameCode.toLowerCase()) {
+            when (CCPCountry.nameCode?.toLowerCase()) {
             //this should be sorted based on country name code.
                 "ad" //andorra
                 -> return R.drawable.ad
@@ -652,255 +644,256 @@ class CodesCountryList : Comparable<CodesCountryList> {
                 "kp" //north korea
                 -> return R.drawable.kp
                 "kr" //south korea
-                -> return R.drawable.flag_south_korea
+                -> return R.drawable.kr
                 "kw" //kuwait
-                -> return R.drawable.flag_kuwait
+                -> return R.drawable.kw
                 "ky" //Cayman_Islands
-                -> return R.drawable.flag_cayman_islands
+                -> return R.drawable.ky
                 "kz" //kazakhstan
-                -> return R.drawable.flag_kazakhstan
+                -> return R.drawable.kz
                 "la" //lao people\'s democratic republic
-                -> return R.drawable.flag_laos
+                -> return R.drawable.la
                 "lb" //lebanon
-                -> return R.drawable.flag_lebanon
+                -> return R.drawable.lb
                 "lc" //st lucia
-                -> return R.drawable.flag_saint_lucia
+                -> return R.drawable.lc
                 "li" //liechtenstein
-                -> return R.drawable.flag_liechtenstein
+                -> return R.drawable.li
                 "lk" //sri lanka
-                -> return R.drawable.flag_sri_lanka
+                -> return R.drawable.lk
                 "lr" //liberia
-                -> return R.drawable.flag_liberia
+                -> return R.drawable.lr
                 "ls" //lesotho
-                -> return R.drawable.flag_lesotho
+                -> return R.drawable.ls
                 "lt" //lithuania
-                -> return R.drawable.flag_lithuania
+                -> return R.drawable.lt
                 "lu" //luxembourg
-                -> return R.drawable.flag_luxembourg
+                -> return R.drawable.lu
                 "lv" //latvia
-                -> return R.drawable.flag_latvia
+                -> return R.drawable.lv
                 "ly" //libya
-                -> return R.drawable.flag_libya
+                -> return R.drawable.ly
                 "ma" //morocco
-                -> return R.drawable.flag_morocco
+                -> return R.drawable.ma
                 "mc" //monaco
-                -> return R.drawable.flag_monaco
+                -> return R.drawable.mc
                 "md" //moldova, republic of
-                -> return R.drawable.flag_moldova
+                -> return R.drawable.md
                 "me" //montenegro
-                -> return R.drawable.flag_of_montenegro// custom
-                "mf" -> return R.drawable.flag_saint_martin
+                -> return R.drawable.me// custom
+                "mf"
+                -> return R.drawable.mf
                 "mg" //madagascar
-                -> return R.drawable.flag_madagascar
+                -> return R.drawable.mg
                 "mh" //marshall islands
-                -> return R.drawable.flag_marshall_islands
+                -> return R.drawable.mh
                 "mk" //macedonia, the former yugoslav republic of
-                -> return R.drawable.flag_macedonia
+                -> return R.drawable.mk
                 "ml" //mali
-                -> return R.drawable.flag_mali
+                -> return R.drawable.ml
                 "mm" //myanmar
-                -> return R.drawable.flag_myanmar
+                -> return R.drawable.mm
                 "mn" //mongolia
-                -> return R.drawable.flag_mongolia
+                -> return R.drawable.mn
                 "mo" //macao
-                -> return R.drawable.flag_macao
+                -> return R.drawable.mo
                 "mp" // Northern mariana islands
-                -> return R.drawable.flag_northern_mariana_islands
+                -> return R.drawable.mp
                 "mq" //martinique
-                -> return R.drawable.flag_martinique
+                -> return R.drawable.mq
                 "mr" //mauritania
-                -> return R.drawable.flag_mauritania
+                -> return R.drawable.mr
                 "ms" //montserrat
-                -> return R.drawable.flag_montserrat
+                -> return R.drawable.ms
                 "mt" //malta
-                -> return R.drawable.flag_malta
+                -> return R.drawable.mt
                 "mu" //mauritius
-                -> return R.drawable.flag_mauritius
+                -> return R.drawable.mu
                 "mv" //maldives
-                -> return R.drawable.flag_maldives
+                -> return R.drawable.mv
                 "mw" //malawi
-                -> return R.drawable.flag_malawi
+                -> return R.drawable.mw
                 "mx" //mexico
-                -> return R.drawable.flag_mexico
+                -> return R.drawable.mx
                 "my" //malaysia
-                -> return R.drawable.flag_malaysia
+                -> return R.drawable.my
                 "mz" //mozambique
-                -> return R.drawable.flag_mozambique
+                -> return R.drawable.mz
                 "na" //namibia
-                -> return R.drawable.flag_namibia
+                -> return R.drawable.na
                 "nc" //new caledonia
-                -> return R.drawable.flag_new_caledonia// custom
+                -> return R.drawable.nc// custom
                 "ne" //niger
-                -> return R.drawable.flag_niger
+                -> return R.drawable.ne
                 "nf" //Norfolk
-                -> return R.drawable.flag_norfolk_island
+                -> return R.drawable.nf
                 "ng" //nigeria
-                -> return R.drawable.flag_nigeria
+                -> return R.drawable.ng
                 "ni" //nicaragua
-                -> return R.drawable.flag_nicaragua
+                -> return R.drawable.ni
                 "nl" //netherlands
-                -> return R.drawable.flag_netherlands
+                -> return R.drawable.nl
                 "no" //norway
-                -> return R.drawable.flag_norway
+                -> return R.drawable.no
                 "np" //nepal
-                -> return R.drawable.flag_nepal
+                -> return R.drawable.np
                 "nr" //nauru
-                -> return R.drawable.flag_nauru
+                -> return R.drawable.nr
                 "nu" //niue
-                -> return R.drawable.flag_niue
+                -> return R.drawable.nu
                 "nz" //new zealand
-                -> return R.drawable.flag_new_zealand
+                -> return R.drawable.nz
                 "om" //oman
-                -> return R.drawable.flag_oman
+                -> return R.drawable.om
                 "pa" //panama
-                -> return R.drawable.flag_panama
+                -> return R.drawable.pa
                 "pe" //peru
-                -> return R.drawable.flag_peru
+                -> return R.drawable.pe
                 "pf" //french polynesia
-                -> return R.drawable.flag_french_polynesia
+                -> return R.drawable.pf
                 "pg" //papua new guinea
-                -> return R.drawable.flag_papua_new_guinea
+                -> return R.drawable.pg
                 "ph" //philippines
-                -> return R.drawable.flag_philippines
+                -> return R.drawable.ph
                 "pk" //pakistan
-                -> return R.drawable.flag_pakistan
+                -> return R.drawable.pk
                 "pl" //poland
-                -> return R.drawable.flag_poland
+                -> return R.drawable.pl
                 "pm" //saint pierre and miquelon
-                -> return R.drawable.flag_saint_pierre
+                -> return R.drawable.pm
                 "pn" //pitcairn
-                -> return R.drawable.flag_pitcairn_islands
+                -> return R.drawable.pn
                 "pr" //puerto rico
-                -> return R.drawable.flag_puerto_rico
+                -> return R.drawable.pr
                 "ps" //palestine
-                -> return R.drawable.flag_palestine
+                -> return R.drawable.ps
                 "pt" //portugal
-                -> return R.drawable.flag_portugal
+                -> return R.drawable.pt
                 "pw" //palau
-                -> return R.drawable.flag_palau
+                -> return R.drawable.pw
                 "py" //paraguay
-                -> return R.drawable.flag_paraguay
+                -> return R.drawable.py
                 "qa" //qatar
-                -> return R.drawable.flag_qatar
+                -> return R.drawable.qa
                 "re" //la reunion
-                -> return R.drawable.flag_martinique // no exact flag found
+                -> return R.drawable.re // no exact flag found
                 "ro" //romania
-                -> return R.drawable.flag_romania
+                -> return R.drawable.ro
                 "rs" //serbia
-                -> return R.drawable.flag_serbia // custom
+                -> return R.drawable.rs // custom
                 "ru" //russian federation
-                -> return R.drawable.flag_russian_federation
+                -> return R.drawable.ru
                 "rw" //rwanda
-                -> return R.drawable.flag_rwanda
+                -> return R.drawable.rw
                 "sa" //saudi arabia
-                -> return R.drawable.flag_saudi_arabia
+                -> return R.drawable.sa
                 "sb" //solomon islands
-                -> return R.drawable.flag_soloman_islands
+                -> return R.drawable.sb
                 "sc" //seychelles
-                -> return R.drawable.flag_seychelles
+                -> return R.drawable.sc
                 "sd" //sudan
-                -> return R.drawable.flag_sudan
+                -> return R.drawable.sd
                 "se" //sweden
-                -> return R.drawable.flag_sweden
+                -> return R.drawable.se
                 "sg" //singapore
-                -> return R.drawable.flag_singapore
+                -> return R.drawable.sg
                 "sh" //saint helena, ascension and tristan da cunha
-                -> return R.drawable.flag_saint_helena // custom
+                -> return R.drawable.sh // custom
                 "si" //slovenia
-                -> return R.drawable.flag_slovenia
+                -> return R.drawable.si
                 "sk" //slovakia
-                -> return R.drawable.flag_slovakia
+                -> return R.drawable.sk
                 "sl" //sierra leone
-                -> return R.drawable.flag_sierra_leone
+                -> return R.drawable.sl
                 "sm" //san marino
-                -> return R.drawable.flag_san_marino
+                -> return R.drawable.sm
                 "sn" //senegal
-                -> return R.drawable.flag_senegal
+                -> return R.drawable.sn
                 "so" //somalia
-                -> return R.drawable.flag_somalia
+                -> return R.drawable.so
                 "sr" //suriname
-                -> return R.drawable.flag_suriname
+                -> return R.drawable.sr
                 "st" //sao tome and principe
-                -> return R.drawable.flag_sao_tome_and_principe
+                -> return R.drawable.st
                 "sv" //el salvador
-                -> return R.drawable.flag_el_salvador
+                -> return R.drawable.sv
                 "sx" //sint maarten
-                -> return R.drawable.flag_sint_maarten
+                -> return R.drawable.sx
                 "sy" //syrian arab republic
-                -> return R.drawable.flag_syria
+                -> return R.drawable.sy
                 "sz" //swaziland
-                -> return R.drawable.flag_swaziland
+                -> return R.drawable.sz
                 "tc" //turks & caicos islands
-                -> return R.drawable.flag_turks_and_caicos_islands
+                -> return R.drawable.tc
                 "td" //chad
-                -> return R.drawable.flag_chad
+                -> return R.drawable.td
                 "tg" //togo
-                -> return R.drawable.flag_togo
+                -> return R.drawable.tg
                 "th" //thailand
-                -> return R.drawable.flag_thailand
+                -> return R.drawable.th
                 "tj" //tajikistan
-                -> return R.drawable.flag_tajikistan
+                -> return R.drawable.tj
                 "tk" //tokelau
-                -> return R.drawable.flag_tokelau // custom
+                -> return R.drawable.tk // custom
                 "tl" //timor-leste
-                -> return R.drawable.flag_timor_leste
+                -> return R.drawable.tl
                 "tm" //turkmenistan
-                -> return R.drawable.flag_turkmenistan
+                -> return R.drawable.tm
                 "tn" //tunisia
-                -> return R.drawable.flag_tunisia
+                -> return R.drawable.tn
                 "to" //tonga
-                -> return R.drawable.flag_tonga
+                -> return R.drawable.to
                 "tr" //turkey
-                -> return R.drawable.flag_turkey
+                -> return R.drawable.tr
                 "tt" //trinidad & tobago
-                -> return R.drawable.flag_trinidad_and_tobago
+                -> return R.drawable.tt
                 "tv" //tuvalu
-                -> return R.drawable.flag_tuvalu
+                -> return R.drawable.tv
                 "tw" //taiwan, province of china
-                -> return R.drawable.flag_taiwan
+                -> return R.drawable.tw
                 "tz" //tanzania, united republic of
-                -> return R.drawable.flag_tanzania
+                -> return R.drawable.tz
                 "ua" //ukraine
-                -> return R.drawable.flag_ukraine
+                -> return R.drawable.ua
                 "ug" //uganda
-                -> return R.drawable.flag_uganda
+                -> return R.drawable.ug
                 "us" //united states
-                -> return R.drawable.flag_united_states_of_america
+                -> return R.drawable.us
                 "uy" //uruguay
-                -> return R.drawable.flag_uruguay
+                -> return R.drawable.uy
                 "uz" //uzbekistan
-                -> return R.drawable.flag_uzbekistan
+                -> return R.drawable.uz
                 "va" //holy see (vatican city state)
-                -> return R.drawable.flag_vatican_city
+                -> return R.drawable.va
                 "vc" //st vincent & the grenadines
-                -> return R.drawable.flag_saint_vicent_and_the_grenadines
+                -> return R.drawable.vc
                 "ve" //venezuela, bolivarian republic of
-                -> return R.drawable.flag_venezuela
+                -> return R.drawable.ve
                 "vg" //british virgin islands
-                -> return R.drawable.flag_british_virgin_islands
+                -> return R.drawable.vg
                 "vi" //us virgin islands
-                -> return R.drawable.flag_us_virgin_islands
+                -> return R.drawable.vi
                 "vn" //vietnam
-                -> return R.drawable.flag_vietnam
+                -> return R.drawable.vn
                 "vu" //vanuatu
-                -> return R.drawable.flag_vanuatu
+                -> return R.drawable.vu
                 "wf" //wallis and futuna
-                -> return R.drawable.flag_wallis_and_futuna
+                -> return R.drawable.wf
                 "ws" //samoa
-                -> return R.drawable.flag_samoa
+                -> return R.drawable.ws
                 "xk" //kosovo
-                -> return R.drawable.flag_kosovo
+                -> return R.drawable.xk
                 "ye" //yemen
-                -> return R.drawable.flag_yemen
+                -> return R.drawable.ye
                 "yt" //mayotte
-                -> return R.drawable.flag_martinique // no exact flag found
+                -> return R.drawable.yt // no exact flag found
                 "za" //south africa
-                -> return R.drawable.flag_south_africa
+                -> return R.drawable.za
                 "zm" //zambia
-                -> return R.drawable.flag_zambia
+                -> return R.drawable.zm
                 "zw" //zimbabwe
-                -> return R.drawable.flag_zimbabwe
-                else -> return R.drawable.flag_transparent
+                -> return R.drawable.zw
+                else -> return R.drawable.mx
             }
         }
 
@@ -910,7 +903,7 @@ class CodesCountryList : Comparable<CodesCountryList> {
          *
          * @return
          */
-        fun getLibraryMasterCountryList(context: Context, language: PickerCountryCode.Language): List<CodesCountryList>? {
+        fun getLibraryMasterCountryList(context: Context, language: PickerCountryCode.Language?): List<CodesCountryList>? {
             if (loadedLibraryMasterListLanguage == null || language !== loadedLibraryMasterListLanguage || loadedLibraryMaterList == null || loadedLibraryMaterList!!.size == 0) { //when it is required to load country in country list
                 loadDataFromXML(context, language)
             }
